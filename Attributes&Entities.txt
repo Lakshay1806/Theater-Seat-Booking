@@ -1,0 +1,55 @@
+1️⃣ Entities & Attributes
+🎬 1. Theater
+Attributes:
+theater_id (Primary Key)
+theater_name
+location
+total_screens
+🎥 2. Screen
+Attributes:
+screen_id (Primary Key)
+theater_id (Foreign Key)
+screen_name
+total_seats
+💺 3. Seat
+Attributes:
+seat_id (Primary Key)
+screen_id (Foreign Key)
+row_number
+seat_number
+seat_type (Normal / Premium / VIP)
+price
+🎞 4. Movie
+Attributes:
+movie_id (Primary Key)
+movie_name
+duration
+genre
+language
+⏰ 5. Show
+Attributes:
+show_id (Primary Key)
+movie_id (Foreign Key)
+screen_id (Foreign Key)
+show_date
+show_time
+👤 6. Customer
+Attributes:
+customer_id (Primary Key)
+name
+email
+phone_number
+🎟 7. Booking
+Attributes:
+booking_id (Primary Key)
+customer_id (Foreign Key)
+show_id (Foreign Key)
+booking_date
+total_amount
+payment_status
+🪑 8. Booking_Seat (Weak/Bridge Entity)
+(Used for many-to-many relationship between Booking and Seat)
+Attributes:
+booking_seat_id (Primary Key)
+booking_id (Foreign Key)
+seat_id (Foreign Key)
